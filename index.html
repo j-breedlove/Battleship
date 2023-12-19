@@ -23,6 +23,7 @@
 
 <body>
 <div id="board">
+  <div id="messageArea"></div>
   <table>
     <tr>
       <td id="00"></td> <td id="01"></td> <td id="02"></td> <td id="03"></td>
@@ -53,10 +54,15 @@
       <td id="64"></td> <td id="65"></td> <td id="66"></td>
     </tr>
   </table>
+  <form>
+    <label class="guessInput">
+      <input type="text" id="guessInput" placeholder="A0">
+    </label>
+    <input type="button" id="fireButton" value="Fire!">
+  </form>
 </div>
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
   <script src="js/app.js"></script>
 
 </body>
