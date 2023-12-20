@@ -17,11 +17,11 @@ html {
   line-height: 1.4;
 }
 
-body{
+body {
   background-color: black;
 }
 
-#board{
+#board {
   position: relative;
   width: 1024px;
   height: 863px;
@@ -29,26 +29,26 @@ body{
   background: url("../img/board.jpg") no-repeat;
 }
 
-#messageArea{
+#messageArea {
   position: absolute;
   top: 0;
   left: 0;
   color: rgb(83, 175, 19);
 }
 
-table{
+table {
   position: absolute;
   left: 173px;
   top: 90px;
   border-spacing: 0;
 }
 
-td{
+td {
   width: 94px;
   height: 94px;
 }
 
-form{
+form {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -56,12 +56,19 @@ form{
   background-color: rgb(83, 175, 19);
 }
 
-form input{
+form input {
   background-color: rgb(152, 207, 113);
   border-color: rgb(83, 175, 19);
   font-size: 1em;
 }
 
+.hit {
+  background: url("../img/ship.png") no-repeat center center;
+}
+
+.miss {
+  background: url("../img/miss.png") no-repeat center center;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -289,4 +296,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
