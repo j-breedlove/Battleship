@@ -13,7 +13,7 @@ const view = {
   },
 };
 
-let model = {
+const model = {
   boardSize: 7,
   numShips: 3,
   shipLength: 3,
@@ -24,4 +24,28 @@ let model = {
     { locations: ["24", "34", "44"], hits: ["", "", ""] },
     { locations: ["10", "11", "12"], hits: ["", "", ""] },
   ],
+  fire: function (guess) {
+    for (let i = 0; i < this.numShips; i++) {
+      let ship = { locations: ["06", "16", "26"], hits: ["", "", ""] };
+      // let ship = this.ships[i];
+      let locations = ship.locations;
+      let index = locations.indexOf(guess);
+      if (index >= 0) {
+        ship.hits[index] = "hit";
+        if (this.isSunk(ship)) {
+          this.shipSunk++;
+        }
+        return true;
+      }
+    }
+    return false;
+  },
+  isSunk: function (ship) {
+    for (let i = 0; i < this.shipLength; i++) {
+      if (ship.hits[i] !== "hit") {
+        return false;
+      }
+    }
+    return true;
+  },
 };
